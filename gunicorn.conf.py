@@ -1,0 +1,10 @@
+bind = "127.0.0.1:8000"
+workers = 2
+threads = 2
+worker_class = "sync"
+worker_tmp_dir = "/dev/shm"
+keepalive = 5
+timeout = 30
+accesslog = "-"
+errorlog = "-"
+loglevel = "info"

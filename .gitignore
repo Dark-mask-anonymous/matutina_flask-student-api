@@ -1,0 +1,6 @@
+students.db
+venv/
+__pycache__/
+*.py[cod]
+
+students.db

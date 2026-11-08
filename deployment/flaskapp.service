@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn service for Flask application
+After=network.target
+
+[Service]
+User=your-user
+Group=www-data
+WorkingDirectory=/home/your-user/your-repository
+Environment="PATH=/home/your-user/your-repository/venv/bin"
+ExecStart=/home/your-user/your-repository/venv/bin/gunicorn --config /home/your-user/your-repository/gunicorn.conf.py app:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
